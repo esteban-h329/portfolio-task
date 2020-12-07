@@ -1,6 +1,6 @@
 @font-face {
   font-family: "BaronNeue";
-  src: url(./assets/baron_neue/BaronNeue-Regular.otf);
+  src: url(../assets/baron_neue/BaronNeue-Regular.otf);
   font-weight: normal;
   font-style: normal;
 }
@@ -63,7 +63,7 @@ body {
 .simple-header p {
   position: absolute;
   margin-left: 1rem;
-  bottom: 1rem;
+  bottom: 4rem;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
   font-family: "Rubik", sans-serif;
@@ -135,27 +135,34 @@ body {
   color: #988345;
 }
 
-/* this is just the section with the information of contact */
+/* this the part for the personal photo and info */
 
-.principal-contact {
-  margin-top: 10rem;
-  text-align: center;
-  margin-bottom: 10rem;
+.information-container__photo {
+  width: 50%;
+  margin: 0 auto;
 }
 
-.contact-container {
+.information-container__photo img {
+  margin-top: 5rem;
+  border-radius: 0.5rem;
   width: 100%;
+  height: auto;
 }
 
-.contact-container h1 {
+.information-container h1 {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
   position: relative;
-  margin-bottom: 5rem;
-  letter-spacing: 0.3rem;
-  font-size: 4rem;
+  text-align: center;
+  font-size: 2rem;
   font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
+  line-height: 2.5rem;
+  letter-spacing: 0.3rem;
 }
 
-.contact-container h1::after {
+.information-container h1::after {
   content: "";
   background: #988345;
   position: absolute;
@@ -165,101 +172,22 @@ body {
   right: 44%;
 }
 
-.contact-container h2 {
-  margin-bottom: 0.6rem;
-  font-size: 2rem;
-  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
-  text-transform: uppercase;
-}
-
-.contact-container h4 {
-  margin-bottom: 0.4rem;
-  font-size: 1.2rem;
-  font-family: "Rubik", sans-serif;
-  color: #988345;
-  letter-spacing: 0.1rem;
-}
-
-.contact-container p {
-  margin-bottom: 0.4rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
-}
-
-/* And this is the last part for the footer info */
-
-.foot-print {
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tag-info {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.foot-print h4 {
-  width: 100%;
-  position: relative;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
-}
-
-.foot-print h4::after {
-  content: "";
-  background: #988345;
-  position: absolute;
-  width: 3.5rem;
-  height: 0.5rem;
-  bottom: -1.5rem;
-  left: 0;
-}
-
-.foot-print h4::before {
-  content: "";
-  background: #b3b9c0;
-  border-radius: 1rem;
-  position: absolute;
-  width: 90%;
-  height: 0.2rem;
-  bottom: -1.4rem;
-  left: 3.8rem;
-}
-
-.foot-print a {
-  width: 100%;
-  margin-left: 2rem;
+.information-container p {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  letter-spacing: 0.2rem;
   font-size: 1.5rem;
   font-family: "Rubik", sans-serif;
-  text-decoration: none;
-  color: #988345;
+  line-height: 2rem;
+  color: black;
+  text-align: center;
 }
 
 ::-webkit-scrollbar {
   width: 0.7rem;
   background: white;
-}
-
-/* here is a transitions for the breakpoints of media queries */
-
-.contact-container h1,
-h2,
-h4,
-p {
-  transition: all 1s;
-}
-
-.tag-info {
-  transition: all 1s;
-}
-
-.foot-print h4,
-a {
-  transition: all 1s;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -268,27 +196,22 @@ a {
   box-shadow: 0 -100vh 0 100vh black;
 }
 
+.information-container h1,
+p {
+  transition: all 0.5s;
+}
+
 @media screen and (min-width: 768px) {
-  .contact-container h1 {
-    font-size: 5rem;
-  }
-
-  .contact-container h1::after {
-    right: 47%;
-  }
-
-  .contact-container h2 {
+  .information-container h1 {
     font-size: 3rem;
+    line-height: 4rem;
   }
-  .contact-container h4 {
-    font-size: 1.5rem;
+  .information-container h1::after {
+    right: 45%;
   }
-
-  .contact-container p {
-    font-size: 1.4rem;
-  }
-  .tag-info {
-    width: 50%;
+  .information-container__photo {
+    width: 30%;
+    margin: 0 auto;
   }
 }
 
@@ -296,6 +219,7 @@ a {
   .simple-header__nav a h4 {
     display: block;
   }
+
   .simple-header__nav a h4:hover {
     color: #988345;
   }
@@ -305,30 +229,23 @@ a {
   .simple-header a img {
     margin-left: 2.5rem;
   }
-
   .fa-times {
-    right: 1.5rem;
-  }
-  .contact-container h1 {
-    font-size: 7rem;
-  }
-  .contact-container h1::after {
-    right: 48%;
-  }
-  .contact-container h2 {
-    font-size: 4rem;
-  }
-  .contact-container h4 {
-    font-size: 2rem;
+    right: 2rem;
   }
 
-  .contact-container p {
-    font-size: 1.8rem;
+  .information-container__photo {
+    width: 20%;
+    margin: 0 auto;
   }
-  .foot-print h4 {
-    font-size: 2.8rem;
+  .information-container h1 {
+    font-size: 4rem;
+    line-height: 5rem;
   }
-  .foot-print a {
+  .information-container h1::after {
+    right: 45%;
+  }
+  .information-container p {
     font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
