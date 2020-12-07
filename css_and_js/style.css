@@ -300,22 +300,22 @@ body {
 }
 
 .first-image {
-  background-image: url(./assets/AIphotography.jpg);
+  background-image: url(../assets/AIphotography.jpg);
 }
 .second-image {
-  background-image: url(./assets/Darnit2.jpg);
+  background-image: url(../assets/Darnit2.jpg);
 }
 .third-image {
-  background-image: url(./assets/Uvaro.jpg);
+  background-image: url(../assets/Uvaro.jpg);
 }
 .fourth-image {
-  background-image: url(./assets/Iceland.jpg);
+  background-image: url(../assets/Iceland.jpg);
 }
 .fifth-image {
-  background-image: url(./assets/Creative-motion.png);
+  background-image: url(../assets/Creative-motion.png);
 }
 .sixth-image {
-  background-image: url(./assets/Logotipo.jpg);
+  background-image: url(../assets/Logotipo.jpg);
 }
 
 ::-webkit-scrollbar {
