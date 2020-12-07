@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="aboutme.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Esteban Hernández | Developer</title>
+    <link rel="icon" href="./assets/logo2.svg" />
+    <script
+      src="https://kit.fontawesome.com/6df9d6c2e2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript.js"></script>
+  </head>
+  <body>
+    <!-- starting with the header part -->
+    <header class="simple-header" id="start-hero">
+      <a href="index.html"
+        ><img src="./assets/logo.svg" alt="Logo inicial"
+      /></a>
+      <!-- the nav part for the menu -->
+      <nav class="simple-header__nav">
+        <a onclick="showMenu()" href="#">
+          <h4>Menu</h4>
+        </a>
+        <a onclick="showMenu()" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+        <ul id="menu" class="hide">
+          <a href="index.html"
+            ><img src="./assets/logo2.svg" alt="Logo inicial"
+          /></a>
+          <li class="menu-tag"><a href="index.html">Work</a></li>
+          <li class="menu-tag"><a href="aboutme.html">About me</a></li>
+          <li class="menu-tag"><a href="contact.html">Contact</a></li>
+          <a onclick="showMenu()" href="#">
+            <i class="fas fa-times"></i>
+          </a>
+          <p>© Esteban Hernández 2020.</p>
+        </ul>
+      </nav>
+    </header>
+    <!-- this is just the section with de personal info with some description -->
+    <section class="information-container">
+      <figure class="information-container__photo">
+        <img src="./assets/Different.jpeg" alt="Personal photo" />
+      </figure>
+      <h1>Hey There, I´m Esteban a person Who loves code and other things.</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum
+        libero impedit excepturi sed sequi adipisci temporibus maxime, vitae,
+        fugiat quas odit mollitia quos architecto voluptatibus laborum provident
+        vel tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Veritatis, culpa? Quam sunt veniam, commodi aspernatur nostrum, officia
+        rerum iste ab dicta numquam ratione ea unde blanditiis voluptatum quos
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum
+        libero impedit excepturi sed sequi adipisci temporibus maxime, vitae,
+        fugiat quas odit mollitia quos architecto voluptatibus laborum provident
+        vel tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Veritatis, culpa? Quam sunt veniam, commodi aspernatur nostrum, officia
+        rerum iste ab dicta numquam ratione ea unde blanditiis voluptatum quos
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "BaronNeue";
+  src: url(./assets/baron_neue/BaronNeue-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0efeb;
+}
+
+/* this part is the header */
+
+.simple-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.simple-header a img {
+  width: 5rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.simple-header__nav {
+  display: flex;
+}
+
+.simple-header__nav a {
+  text-decoration: none;
+}
+
+.simple-header__nav a h4 {
+  display: none;
+  color: black;
+  margin-right: 2rem;
+  margin-top: 2.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-family: "BaronNeue", "Helvetica Neue", Helvetica, Arial;
+}
+
+.simple-header__nav ul {
+  margin-top: 5rem;
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.simple-header p {
+  position: absolute;
+  margin-left: 1rem;
+  bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+.fa-bars {
+  color: black;
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* here is the part for the styles of menu */
+
+#menu {
+  position: fixed;
+  top: -5rem;
+  right: 0rem;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(6, 6, 6, 0.9);
+  transition: all 1s ease-in-out;
+}
+
+#menu.hide {
+  right: -200rem;
+}
+
+.fa-times {
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+}
+
+.menu-tag a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-family: "BaronNeue", "Helvetica Neue", Helvetica, Arial;
+  margin-left: 2rem;
+  margin-top: 5rem;
+  font-size: 4rem;
+  text-transform: lowercase;
+  transition: all 0.5s;
+}
+
+.menu-tag a::before {
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  width: 95vw;
+  height: 0.5rem;
+  background: #988345;
+  border-radius: 2rem;
+  content: "";
+  transition: all 1s;
+}
+
+.menu-tag a:hover::before {
+  width: 0vw;
+  color: #988345;
+}
+
+.menu-tag a:hover {
+  color: #988345;
+}
+
+/* this the part for the personal photo and info */
+
+.information-container__photo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.information-container__photo img {
+  margin-top: 5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.information-container h1 {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
+  line-height: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.information-container h1::after {
+  content: "";
+  background: #988345;
+  position: absolute;
+  width: 4rem;
+  height: 0.8rem;
+  bottom: -3rem;
+  right: 44%;
+}
+
+.information-container p {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 2rem;
+  color: black;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  opacity: 0.5;
+  box-shadow: 0 -100vh 0 100vh black;
+}
+
+.information-container h1,
+p {
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .information-container h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .information-container h1::after {
+    right: 45%;
+  }
+  .information-container__photo {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .simple-header__nav a h4 {
+    display: block;
+  }
+
+  .simple-header__nav a h4:hover {
+    color: #988345;
+  }
+  .simple-header p {
+    margin-left: 2.5rem;
+  }
+  .simple-header a img {
+    margin-left: 2.5rem;
+  }
+  .fa-times {
+    right: 2rem;
+  }
+
+  .information-container__photo {
+    width: 20%;
+    margin: 0 auto;
+  }
+  .information-container h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  .information-container h1::after {
+    right: 45%;
+  }
+  .information-container p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

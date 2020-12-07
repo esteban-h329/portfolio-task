@@ -1,0 +1,434 @@
+@font-face {
+  font-family: "BaronNeue";
+  src: url(./assets/baron_neue/BaronNeue-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #101011;
+}
+/* starting with the header */
+
+.simple-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.simple-header a img {
+  width: 5rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.simple-header__nav {
+  display: flex;
+}
+
+.simple-header__nav a {
+  text-decoration: none;
+}
+
+.simple-header__nav a h4 {
+  display: none;
+  color: white;
+  margin-right: 2rem;
+  margin-top: 2.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-family: "BaronNeue", "Helvetica Neue", Helvetica, Arial;
+}
+
+.simple-header__nav ul {
+  margin-top: 5rem;
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.simple-header p {
+  position: absolute;
+  margin-left: 1rem;
+  bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+.fa-bars {
+  color: white;
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* This part is the navigation  */
+
+#menu {
+  position: fixed;
+  top: -5rem;
+  right: 0rem;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(6, 6, 6, 0.9);
+  transition: all 1s ease-in-out;
+}
+
+#menu.hide {
+  right: -200rem;
+}
+
+.fa-times {
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+}
+
+.menu-tag a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-family: "BaronNeue", "Helvetica Neue", Helvetica, Arial;
+  margin-left: 2rem;
+  margin-top: 5rem;
+  font-size: 4rem;
+  text-transform: lowercase;
+  transition: all 0.5s;
+}
+
+.menu-tag a::before {
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  width: 95vw;
+  height: 0.5rem;
+  background: #988345;
+  border-radius: 2rem;
+  content: "";
+  transition: all 1s;
+}
+
+.menu-tag a:hover::before {
+  width: 0vw;
+  color: #988345;
+}
+
+.menu-tag a:hover {
+  color: #988345;
+}
+
+/* this is the main part, include a principal title and arrow to go to my job part */
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-img {
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 10rem;
+}
+
+.intro h1 {
+  position: relative;
+  text-align: center;
+  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
+  color: #988345;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 5rem;
+}
+
+.intro h1::after {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 6rem;
+  height: 0.8rem;
+  bottom: -3rem;
+  right: 41%;
+}
+
+.intro h3 {
+  position: relative;
+  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: white;
+}
+
+.intro-arrow {
+  width: 5rem;
+  position: absolute;
+  right: 42%;
+  bottom: 2rem;
+  animation: 2s infinite ease;
+  cursor: pointer;
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes beat {
+  70% {
+    transform: translateY(1.5rem);
+  }
+}
+
+.billboard::before {
+  content: "";
+  position: absolute;
+  bottom: -5rem;
+  right: 0;
+  width: 50%;
+  height: 110%;
+  background: rgba(24, 25, 26, 0.7);
+}
+
+/* from here i just give styles to the grid for my projects */
+
+#work {
+  border-top: 1rem solid #988345;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fa-chevron-circle-up {
+  position: fixed;
+  font-size: 4rem;
+  z-index: 1;
+  color: #988345;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.work-image__container {
+  width: 100%;
+  height: 40rem;
+  border: 0.1rem solid black;
+  position: relative;
+}
+
+.work-image__container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(24, 25, 26, 0.6);
+}
+
+.work-image__container p {
+  width: 14rem;
+  height: 13.5rem;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  padding: 5rem;
+  border: 0.8rem solid #988345;
+  border-radius: 50%;
+  line-height: 1rem;
+  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
+  font-size: 5rem;
+  color: #988345;
+  cursor: pointer;
+}
+
+.work-image__container h4 {
+  position: absolute;
+  bottom: 6rem;
+  margin-left: 1rem;
+  color: #f2f1ed;
+  font-size: 2rem;
+  font-family: BaronNeue, "Helvetica Neue", Helvetica, Arial;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+.work-image__container h4::before {
+  content: "";
+  background: #988345;
+  border-radius: 1rem;
+  position: absolute;
+  width: 4rem;
+  height: 0.7rem;
+  bottom: -3rem;
+}
+
+.work-image__container h4::after {
+  content: "";
+  background: #2f3133;
+  border-radius: 1rem;
+  position: absolute;
+  width: 25rem;
+  height: 0.2rem;
+  bottom: -2.7rem;
+  left: 4.4rem;
+}
+
+[class*="-image"] {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.first-image {
+  background-image: url(./assets/AIphotography.jpg);
+}
+.second-image {
+  background-image: url(./assets/Darnit2.jpg);
+}
+.third-image {
+  background-image: url(./assets/Uvaro.jpg);
+}
+.fourth-image {
+  background-image: url(./assets/Iceland.jpg);
+}
+.fifth-image {
+  background-image: url(./assets/Creative-motion.png);
+}
+.sixth-image {
+  background-image: url(./assets/Logotipo.jpg);
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  opacity: 0.5;
+  box-shadow: 0 -100vh 0 100vh white;
+}
+
+/* Here i give a transition when the grid change of size */
+
+.work-image__container {
+  transition: all 0.5s;
+}
+
+/* Well, i´m starting with the media queries for responsive design */
+
+@media screen and (min-width: 390px) {
+  .intro-arrow {
+    right: 43%;
+  }
+
+  .work-image__container p {
+    left: 34%;
+  }
+}
+
+@media screen and (min-width: 492px) {
+  .intro-arrow {
+    right: 45%;
+  }
+
+  .intro h1::after {
+    right: 44%;
+  }
+
+  .work-image__container p {
+    left: 38%;
+  }
+}
+
+@media screen and (min-width: 698px) {
+  .intro-arrow {
+    right: 46%;
+  }
+
+  .work-image__container p {
+    left: 30%;
+  }
+
+  .work-image__container {
+    width: 50%;
+    height: 35rem;
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  .intro h1 {
+    font-size: 6rem;
+  }
+  .intro h3 {
+    font-size: 3rem;
+  }
+  .intro-arrow {
+    right: 47.5%;
+  }
+  .intro h1::after {
+    right: 46%;
+    bottom: -4rem;
+  }
+
+  .work-image__container p {
+    left: 30%;
+  }
+
+  .work-image__container {
+    width: 33.3%;
+    height: 35rem;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .simple-header__nav a h4 {
+    display: block;
+  }
+
+  .simple-header__nav a h4:hover {
+    color: #988345;
+  }
+
+  .simple-header p {
+    margin-left: 2.5rem;
+  }
+  .simple-header a img {
+    margin-left: 2.5rem;
+  }
+  .fa-times {
+    right: 2rem;
+  }
+  .intro-img {
+    margin-top: 15rem;
+  }
+
+  .intro-arrow {
+    right: 48%;
+    bottom: 5rem;
+  }
+  .work-image__container p {
+    top: 28%;
+    left: 35%;
+  }
+}

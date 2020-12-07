@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Esteban Hernández | Developer</title>
+    <link rel="icon" href="./assets/logo2.svg" />
+    <script
+      src="https://kit.fontawesome.com/6df9d6c2e2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript.js"></script>
+  </head>
+  <body>
+    <!-- starting with the header part -->
+    <header class="simple-header" id="start-hero">
+      <a href="index.html"
+        ><img src="./assets/logo.svg" alt="Logo inicial"
+      /></a>
+      <!-- the nav part for the menu -->
+      <nav class="simple-header__nav">
+        <a onclick="showMenu()" href="#">
+          <h4>Menu</h4>
+        </a>
+        <a onclick="showMenu()" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+        <ul id="menu" class="hide">
+          <a href="index.html"
+            ><img src="./assets/logo2.svg" alt="Logo inicial"
+          /></a>
+          <li class="menu-tag"><a href="index.html">Work</a></li>
+          <li class="menu-tag"><a href="aboutme.html">About me</a></li>
+          <li class="menu-tag"><a href="contact.css">Contact</a></li>
+          <a onclick="showMenu()" href="#">
+            <i class="fas fa-times"></i>
+          </a>
+          <p>© Esteban Hernández 2020.</p>
+        </ul>
+      </nav>
+    </header>
+    <!-- /* this is just the section with the information of contact */ -->
+    <section class="principal-contact">
+      <div class="contact-container">
+        <h1>Let´s Get In Touch.</h1>
+        <h2>Esteban Hernández M</h2>
+        <h4>esteban9259@hotmail.com</h4>
+        <p>+57 300 420 4638</p>
+      </div>
+    </section>
+    <!-- /* And this is the last part for the footer info */ -->
+
+    <footer class="foot-print">
+      <div class="tag-info">
+        <h4>Twitter</h4>
+        <a href="https://twitter.com/home" target="_blank">twitter.com/home</a>
+      </div>
+      <div class="tag-info">
+        <h4>Git Hub</h4>
+        <a href="https://github.com/" target="_blank">github.com/</a>
+      </div>
+      <div class="tag-info">
+        <h4>Linkeind</h4>
+        <a href="https://co.linkedin.com/" target="_blank">co.linkedin.com/</a>
+      </div>
+    </footer>
+  </body>
+</html>

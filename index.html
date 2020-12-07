@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Esteban Hernández | Developer</title>
+    <link rel="icon" href="./assets/logo2.svg" />
+    <script
+      src="https://kit.fontawesome.com/6df9d6c2e2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript.js"></script>
+  </head>
+  <body>
+    <!-- starting with the header part -->
+    <header class="simple-header" id="start-hero">
+      <a href="index.html"
+        ><img src="./assets/logo2.svg" alt="Logo inicial"
+      /></a>
+      <!-- the nav part for the menu -->
+      <nav class="simple-header__nav">
+        <a onclick="showMenu()" href="#">
+          <h4>Menu</h4>
+        </a>
+        <a onclick="showMenu()" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+        <ul id="menu" class="hide">
+          <a href="index.html"
+            ><img src="./assets/logo2.svg" alt="Logo inicial"
+          /></a>
+          <li class="menu-tag"><a href="index.html">Work</a></li>
+          <li class="menu-tag"><a href="aboutme.html">About me</a></li>
+          <li class="menu-tag"><a href="contact.html">Contact</a></li>
+          <a onclick="showMenu()" href="#">
+            <i class="fas fa-times"></i>
+          </a>
+          <p>© Esteban Hernández 2020.</p>
+        </ul>
+      </nav>
+    </header>
+    <!-- this the main part with my principal title -->
+    <main class="intro billboard">
+      <figure class="intro-img">
+        <img src="./assets/descarga.svg" alt="" />
+      </figure>
+      <h1>ESTEBAN HERNÁNDEZ M</h1>
+      <h3>Developer</h3>
+      <figure class="intro-arrow">
+        <a href="#work"
+          ><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDM2IDE4Ij48cGF0aCBmaWxsPSIjRjJGMUVEIiBkPSJNMCAwbDE4IDE4TDM2IDBIMHpNOS42NTcgNGgxNi42ODZMMTggMTIuMzQzIDkuNjU3IDR6Ii8+PC9zdmc+"
+            alt=""
+        /></a>
+      </figure>
+    </main>
+    <!-- this is just and fixed tag to travel to the header from down to up -->
+    <a href="#start-hero">
+      <i class="fas fa-chevron-circle-up"></i>
+    </a>
+    <!-- start with the section for my grid of projects -->
+    <section id="work">
+      <div class="work-image__container first-image">
+        <a href="index.html">
+          <p>1</p>
+          <h4>AI Photography</h4></a
+        >
+      </div>
+      <div class="work-image__container second-image">
+        <a href="index.html">
+          <p>2</p>
+          <h4>DARNIT2</h4>
+        </a>
+      </div>
+      <div class="work-image__container third-image">
+        <a href="index.html">
+          <p>3</p>
+          <h4>uVARo</h4>
+        </a>
+      </div>
+      <div class="work-image__container fourth-image">
+        <a href="index.html">
+          <p>4</p>
+          <h4>ICELAND</h4>
+        </a>
+      </div>
+      <div class="work-image__container fifth-image">
+        <a href="index.html">
+          <p>5</p>
+          <h4>CREATIVE MoTIoN</h4>
+        </a>
+      </div>
+      <div class="work-image__container sixth-image">
+        <a href="index.html">
+          <p>6</p>
+          <h4>LoGoFoLIo</h4>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
