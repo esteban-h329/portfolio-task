@@ -20,7 +20,7 @@ body {
   background-color: #f0efeb;
 }
 
-/* starting with the header */
+/* this part is the header */
 
 .simple-header {
   width: 100%;
@@ -77,7 +77,7 @@ body {
   margin-right: 1rem;
 }
 
-/* This part is the navigation  */
+/* here is the part for the styles of menu */
 
 #menu {
   position: fixed;
@@ -190,7 +190,7 @@ body {
 /* And this is the last part for the footer info */
 
 .foot-print {
-  width: 98%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
